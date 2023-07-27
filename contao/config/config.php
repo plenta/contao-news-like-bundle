@@ -11,4 +11,6 @@ declare(strict_types=1);
  * @link          https://github.com/plenta/
  */
 
-$GLOBALS['TL_JAVASCRIPT'][] = \Contao\System::getContainer()->get('assets.packages')->getUrl('plentanewslike/layout.js', 'plentanewslike');
+use Contao\System;
+
+$GLOBALS['TL_JAVASCRIPT'][] = System::getContainer()->get('assets.packages')->getUrl('plentanewslike/layout.js', 'plentanewslike');
