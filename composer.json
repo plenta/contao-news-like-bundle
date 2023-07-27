@@ -1,7 +1,7 @@
 {
     "name":"plenta/contao-news-like-bundle",
-    "description":"Adds a new form select widget which hides the internal field values in the frontend",
-    "keywords":["contao", "news", "like"],
+    "description":"Integrate your own like button into your contao news.",
+    "keywords":["contao", "news", "like", "announcements", "blog", "heart"],
     "type":"contao-bundle",
     "license":"LGPL-3.0+",
     "authors":[

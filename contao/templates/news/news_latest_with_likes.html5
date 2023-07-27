@@ -17,7 +17,7 @@
     <p class="more"><?= $this->more ?></p>
   <?php endif; ?>
 
-    <?php $this->insert('_likes', ['news' => $this->arrData]); ?>
+    <?php $this->insert('_plenta_likes', ['news' => $this->arrData]); ?>
 
 </div>
 

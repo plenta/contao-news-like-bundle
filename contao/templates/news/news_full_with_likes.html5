@@ -9,7 +9,7 @@
     <h2><?= $this->subHeadline ?></h2>
   <?php endif; ?>
 
-    <?php $this->insert('_likes', ['news' => $this->arrData]); ?>
+    <?php $this->insert('_plenta_likes', ['news' => $this->arrData]); ?>
 
   <?php if ($this->hasText): ?>
     <?= $this->text ?>
