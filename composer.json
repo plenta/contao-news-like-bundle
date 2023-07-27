@@ -1,0 +1,48 @@
+{
+    "name":"plenta/contao-news-like-bundle",
+    "description":"Adds a new form select widget which hides the internal field values in the frontend",
+    "keywords":["contao", "news", "like"],
+    "type":"contao-bundle",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"Plenta",
+            "homepage":"https://plenta.io",
+            "role":"Developer"
+        }
+    ],
+    "homepage": "https://github.com/plenta/contao-news-like-bundle",
+    "support":{
+            "issues":"https://github.com/plenta/contao-news-like-bundle/issues",
+            "source":"https://github.com/plenta/contao-news-like-bundle"
+    },
+    "require":{
+            "php":">=8.1",
+            "contao/core-bundle": "^4.13 || ^5.1",
+            "contao/news-bundle": "^4.13 || ^5.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "contao/manager-bundle": "^4.13"
+    },
+    "extra": {
+        "contao-manager-plugin": "Plenta\\NewsLikeBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Plenta\\NewsLikeBundle\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "contao-community-alliance/composer-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "replace": {
+        "contao-legacy/contao-protectedselect": "self.version"
+    }
+}

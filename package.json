@@ -1,0 +1,81 @@
+{
+    "devDependencies": {
+        "@babel/plugin-transform-runtime": "^7.19.6",
+        "@symfony/webpack-encore": "^4.1.2",
+        "autoprefixer": "^10.4.14",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "core-js": "^3.26.1",
+        "mime": "^3.0.0",
+        "postcss-loader": "^7.3.0",
+        "regenerator-runtime": "^0.13.7",
+        "sass": "^1.51.0",
+        "sass-loader": "^13.2.0",
+        "stylelint": "^14.16.0",
+        "stylelint-config-standard-scss": "^6.1.0",
+        "webpack-notifier": "^1.15.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server --config-name default",
+        "dev": "encore dev  --config-name default",
+        "watch": "encore dev --watch  --config-name default",
+        "build": "encore production --progress  --config-name default"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.1.1",
+        "selectric": "^1.13.0"
+    },
+    "browserslist": [
+        "last 3 version",
+        "> 1%",
+        "not ie <= 10",
+        "not dead"
+    ],
+    "jshintConfig": {
+        "esversion": 11,
+        "undef": true,
+        "unused": true,
+        "varstmt": true,
+        "jquery": false,
+        "devel": true,
+        "browser": true,
+        "node": true,
+        "worker": false
+    },
+    "stylelint": {
+        "extends": "stylelint-config-standard-scss",
+        "rules": {
+            "indentation": 4,
+            "string-quotes": null,
+            "unit-disallowed-list": [
+                "rem"
+            ],
+            "selector-pseudo-element-colon-notation": "single",
+            "selector-list-comma-newline-after": null,
+            "selector-class-pattern": [
+                "(^([a-z][a-z0-9]*)([-|_][a-z0-9]+)*$)",
+                {
+                    "message": "Expected class selector to be kebab-case or snake-case"
+                }
+            ],
+            "scss/dollar-variable-empty-line-before": [
+                "always",
+                {
+                    "execept": [
+                        "first-nested"
+                    ],
+                    "ignore": [
+                        "after-comment",
+                        "inside-single-line-block"
+                    ]
+                }
+            ],
+            "value-keyword-case": null,
+            "scss/double-slash-comment-empty-line-before": null,
+            "media-feature-range-notation": null,
+            "no-descending-specificity": null
+        }
+    }
+}

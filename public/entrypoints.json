@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "layout": {
+      "js": [
+        "/bundles/plentanewslike/layout.c9492610.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.plenta-news-likes {
+    &:before {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        content: '';
+        mask: url('../img/heart-solid.svg');
+        background-color: currentColor;
+    }
+
+    &.not-liked {
+        &:before {
+            mask: url('../img/heart-regular.svg');
+        }
+
+        &:hover {
+            color: #a4161a;
+            cursor: pointer;
+
+            &:before {
+                mask: url('../img/heart-solid.svg');
+            }
+        }
+    }
+
+    &.liked {
+        color: #a4161a;
+    }
+}

@@ -1,0 +1,4 @@
+<div class="plenta-news-likes {{ news|hasLiked }}" data-id="{{ news.id }}">
+    <input type="hidden" name="REQUEST_TOKEN" value="{{ request_token() }}">
+    <span class="count">{{ news.plenta_likes }}</span>
+</div>

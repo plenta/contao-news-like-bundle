@@ -1,0 +1,5 @@
+plenta_news_like:
+    resource: '../src/Controller'
+    type: annotation
+    defaults:
+        _scope: "frontend"
