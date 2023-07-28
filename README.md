@@ -10,6 +10,8 @@ Search for **news like** and you will find this extension.
 
 ### Install using Composer
 
+`composer require plenta/contao-news-like-bundle`
+
 ## System requirements
 
 - PHP: `^8.1`
