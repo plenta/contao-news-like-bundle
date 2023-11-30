@@ -30,6 +30,9 @@ return $config->setRules(
         '@PHP73Migration' => true,
         '@PHP74Migration' => true,
         '@PHP74Migration:risky' => true,
+        '@PHP80Migration' => true,
+        '@PHP80Migration:risky' => true,
+        '@PHP81Migration' => true,
         '@PHPUnit60Migration:risky' => true,
         '@PHPUnit75Migration:risky' => true,
         '@PHPUnit84Migration:risky' => true,
@@ -39,7 +42,7 @@ return $config->setRules(
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
         'comment_to_phpdoc' => true,
-        'compact_nullable_typehint' => true,
+        'compact_nullable_type_declaration' => true,
         'general_phpdoc_annotation_remove' => [
             'annotations' => [
                 'author',
