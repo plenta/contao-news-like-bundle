@@ -1,29 +1,37 @@
+:root {
+    --plenta-news-likes-color: #a4161a;
+    --plenta-news-likes-icon-size: 1em;
+    --plenta-news-likes-icon-offset-top: 0.15em;
+}
+
 .plenta-news-likes {
     &:before {
         display: inline-block;
-        height: 15px;
-        width: 15px;
+        height: var(--plenta-news-likes-icon-size);
+        width: var(--plenta-news-likes-icon-size);
         content: '';
-        mask: url('../img/heart-solid.svg');
+        mask: url('/layout/img/heart-solid.svg');
         background-color: currentColor;
+        position: relative;
+        top: var(--plenta-news-likes-icon-offset-top);
     }
 
     &.not-liked {
         &:before {
-            mask: url('../img/heart-regular.svg');
+            mask: url('/layout/img/heart-regular.svg');
         }
 
         &:hover {
-            color: #a4161a;
+            color: var(--plenta-news-likes-color);
             cursor: pointer;
 
             &:before {
-                mask: url('../img/heart-solid.svg');
+                mask: url('/layout/img/heart-solid.svg');
             }
         }
     }
 
     &.liked {
-        color: #a4161a;
+        color: var(--plenta-news-likes-color);
     }
 }
