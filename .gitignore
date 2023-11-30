@@ -33,7 +33,6 @@ gulp.config.js
 /app/Resources/contao/config/runonce*.php
 /app
 composer.lock
-package-lock.json
 
 # Ioncube
 /ioncube/encoded
