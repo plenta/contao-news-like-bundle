@@ -47,26 +47,9 @@ Encore
             middleware: [
                 function (req, res, next) {
                     let parsed = url.parse(req.url);
-                    let match = parsed.pathname.match(/layout\/(.+)\.(.+)\.css$/);
+                    let match = parsed.pathname.match(/bundles\/plentanewslike\/layout\.(.+)\.js$/);
                     if (match) {
-                        let path = 'public/layout/'+match[1]+'.css';
-                        try {
-                            if (fileSync.existsSync(path)) {
-                                let text = fileSync.readFileSync(path).toString('utf-8');
-                                res.setHeader('Content-Type', 'text/css');
-                                res.end(text);
-                            }
-                        } catch (err) {}
-
-                        return;
-                    }
-                    next();
-                },
-                function (req, res, next) {
-                    let parsed = url.parse(req.url);
-                    let match = parsed.pathname.match(/layout\/(.+)\.(.+)\.js$/);
-                    if (match) {
-                        let path = 'public/layout/'+match[1]+'.js';
+                        let path = 'public/layout.js';
                         try {
                             if (fileSync.existsSync(path)) {
                                 let text = fileSync.readFileSync(path).toString('utf-8');
@@ -81,9 +64,9 @@ Encore
                 },
                 function (req, res, next) {
                     let parsed = url.parse(req.url);
-                    let match = parsed.pathname.match(/layout\/fonts\/(.+)\.(.+)\.(.+)$/);
+                    let match = parsed.pathname.match(/bundles\/plentanewslike\/layout_js(.+)\.(.+)$/);
                     if (match) {
-                        let path = 'public/layout/fonts/'+match[1]+'.'+match[2]+'.'+match[3];
+                        let path = 'public/layout_js'+match[1]+'.'+match[2];
                         try {
                             if (fileSync.existsSync(path)) {
                                 res.setHeader('Content-Type', mime.getType(path));
@@ -97,41 +80,9 @@ Encore
                 },
                 function (req, res, next) {
                     let parsed = url.parse(req.url);
-                    let match = parsed.pathname.match(/layout\/images\/(.+)\.(.+)\.(.+)$/);
+                    let match = parsed.pathname.match(/bundles\/plentanewslike\/images\/(.+)\.(.+)\.(.+)$/);
                     if (match) {
-                        let path = 'public/layout/images/'+match[1]+'.'+match[2]+'.'+match[3];
-                        try {
-                            if (fileSync.existsSync(path)) {
-                                res.setHeader('Content-Type', mime.getType(path));
-                                res.end(fileSync.readFileSync(path));
-                            }
-                        } catch (err) {}
-
-                        return;
-                    }
-                    next();
-                },
-                function (req, res, next) {
-                    let parsed = url.parse(req.url);
-                    let match = parsed.pathname.match(/layout\/vendors-(.+)\.js$/);
-                    if (match) {
-                        let path = 'public/'+match[0];
-                        try {
-                            if (fileSync.existsSync(path)) {
-                                res.setHeader('Content-Type', mime.getType(path));
-                                res.end(fileSync.readFileSync(path));
-                            }
-                        } catch (err) {}
-
-                        return;
-                    }
-                    next();
-                },
-                function (req, res, next) {
-                    let parsed = url.parse(req.url);
-                    let match = parsed.pathname.match(/layout\/layout_js(.+)\.(.+)$/);
-                    if (match) {
-                        let path = 'public/'+match[0];
+                        let path = 'public/images/'+match[1]+'.'+match[2]+'.'+match[3];
                         try {
                             if (fileSync.existsSync(path)) {
                                 res.setHeader('Content-Type', mime.getType(path));
