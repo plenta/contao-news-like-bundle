@@ -13,4 +13,4 @@ declare(strict_types=1);
 
 use Contao\System;
 
-$GLOBALS['TL_JAVASCRIPT'][] = System::getContainer()->get('assets.packages')->getUrl('plentanewslike/layout.js', 'plentanewslike');
+$GLOBALS['TL_BODY']['PLENTA_NEWS_LIKE_JS'] = '<script src="'.System::getContainer()->get('assets.packages')->getUrl('plentanewslike/layout.js', 'plentanewslike').'" defer></script>';
