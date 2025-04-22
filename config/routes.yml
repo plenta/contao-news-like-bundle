@@ -1,5 +1,5 @@
 plenta_news_like:
     resource: '../src/Controller'
-    type: attributes
+    type: attribute
     defaults:
         _scope: "frontend"
